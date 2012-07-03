@@ -131,7 +131,7 @@ PS1="\[\e[40m\]\[\e[1;37m\] \u \[\e[47m\]\[\e[1;30m\] \w \[\e[0m\]\[\e[1;37m\]\[
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-PS1='\[\e[40m\]\[\e[1;37m\] \u \[\e[47m\]\[\e[1;30m\] $(shorten_path "${PWD}" 50) \[\e[0m\]\[\e[1;37m\]\[\e[42m\] > \[\e[0m\]'
+PS1='\[\e[40m\]\[\e[1;37m\] \u \[\e[47m\]\[\e[1;30m\] $(shorten_path "\w" 50) \[\e[0m\]\[\e[1;37m\]\[\e[42m\] > \[\e[0m\]'
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
