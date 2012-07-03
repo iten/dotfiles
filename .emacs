@@ -3,7 +3,6 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (global-set-key "\M- " 'hippie-expand)
 (global-set-key "\M-/" 'hippie-expand)
-(setq scheme-program-name "scheme")
 
 (autoload 'ack-same "full-ack" nil t)
 (autoload 'ack "full-ack" nil t)
@@ -15,6 +14,13 @@
 (require 'ido)
 (require 'ergo-movement-mode)
 (ergo-movement-mode 1)
+
+;; slime & lisp
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq scheme-program-name "scheme")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/slime/")
+(require 'slime)
+(slime-setup)
 
 ;; styles
 (setq c-default-style "linux"
