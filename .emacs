@@ -1,8 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(global-set-key "\M- " 'hippie-expand)
-(global-set-key "\M-/" 'hippie-expand)
 (setq scheme-program-name "scheme")
 
 (autoload 'ack-same "full-ack" nil t)
@@ -13,6 +11,12 @@
 
 (require 'color-theme)
 (require 'ido)
+
+
+;; keybindings
+(global-set-key "\M- " 'hippie-expand)
+(global-set-key "\M-/" 'hippie-expand)
+(global-set-key "\C-c\C-r" 'revert-buffer)
 (require 'ergo-movement-mode)
 (ergo-movement-mode 1)
 
