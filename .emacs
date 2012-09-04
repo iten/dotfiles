@@ -10,12 +10,13 @@
 
 (require 'color-theme)
 (require 'ido)
-
+(require 'magit)
 
 ;; keybindings
 (global-set-key "\M- " 'hippie-expand)
 (global-set-key "\M-/" 'hippie-expand)
 (global-set-key "\C-c\C-r" 'revert-buffer)
+(global-set-key "\C-x\C-a" 'magit-status)
 (require 'ergo-movement-mode)
 (ergo-movement-mode 1)
 
@@ -72,4 +73,11 @@
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(magit-process-connection-type t))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
