@@ -30,7 +30,7 @@
 ;; styles
 (setq c-default-style "linux"
       c-basic-offset 4)
-
+(setq-default indent-tabs-mode nil)
 ;; display
 
 (set-default-font "Droid Sans Mono-10")
